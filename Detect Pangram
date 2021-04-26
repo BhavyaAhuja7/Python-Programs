@@ -1,0 +1,42 @@
+import string
+s= "hi!"
+#s= "The quick, brown fox jumps over the lazy dog!"
+#s="This isn't a pangram!"
+#s="Cwm fjord bank glyphs vext quiz"
+check = []
+def is_pangram(s):
+    for letter in s:
+        check.append(s.count('a')+s.count('A'))
+        check.append(s.count('b')+s.count('B'))
+        check.append(s.count('c')+s.count('C'))
+        check.append(s.count('d')+s.count('D'))
+        check.append(s.count('e')+s.count('E'))
+        check.append(s.count('f')+s.count('F'))
+        check.append(s.count('g')+s.count('G'))
+        check.append(s.count('h')+s.count('H'))
+        check.append(s.count('i')+s.count('I'))
+        check.append(s.count('j')+s.count('J'))
+        check.append(s.count('k')+s.count('K'))
+        check.append(s.count('l')+s.count('L'))
+        check.append(s.count('m')+s.count('M'))
+        check.append(s.count('n')+s.count('N'))
+        check.append(s.count('o')+s.count('O'))
+        check.append(s.count('p')+s.count('P'))
+        check.append(s.count('q')+s.count('Q'))
+        check.append(s.count('r')+s.count('R'))
+        check.append(s.count('s')+s.count('S'))
+        check.append(s.count('t')+s.count('T'))
+        check.append(s.count('u')+s.count('U'))
+        check.append(s.count('v')+s.count('V'))
+        check.append(s.count('w')+s.count('W'))
+        check.append(s.count('x')+s.count('X'))
+        check.append(s.count('y')+s.count('Y'))
+        check.append(s.count('z')+s.count('Z'))
+        print (check)
+        for e in check:
+            if e == 0:
+                return False
+        return True
+#             else:
+#                 return True  
+is_pangram(s)       
