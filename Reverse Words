@@ -1,0 +1,29 @@
+Ques:
+Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+Example:
+"This is an example!" ==> "sihT si na !elpmaxe"
+"double  spaces"      ==> "elbuod  secaps"
+-------------
+Sample Test:
+def fixed_tests():
+    @test.it('Basic Test Cases')
+    def basic_test_cases():
+        test.assert_equals(reverse_words('The quick brown fox jumps over the lazy dog.'), 'ehT kciuq nworb xof spmuj revo eht yzal .god')
+        test.assert_equals(reverse_words('apple'), 'elppa')
+        test.assert_equals(reverse_words('a b c d'), 'a b c d')
+        test.assert_equals(reverse_words('double  spaced  words'), 'elbuod  decaps  sdrow')
+-------------
+My Solution:
+
+def reverse_words(text):
+    t=text.split(" ")
+    out= []
+    for n in t:
+        out.append(n[::-1])
+    final= ' '.join(out)    
+    return final
+-------------    
+Best Practice:
+def reverse_words(str):
+    return ' '.join(s[::-1] for s in str.split(' '))
